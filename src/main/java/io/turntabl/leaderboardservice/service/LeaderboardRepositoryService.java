@@ -1,5 +1,7 @@
 package io.turntabl.leaderboardservice.service;
 
+import io.turntabl.leaderboardservice.controller.request.UsernameRequestDto;
+import io.turntabl.leaderboardservice.controller.response.ProfileDto;
 import io.turntabl.leaderboardservice.model.Profile;
 import io.turntabl.leaderboardservice.repository.ProfileRepository;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +19,7 @@ public class LeaderboardRepositoryService {
         return profileRepository.findAll();
     }
 
-    public Profile addUser(Profile profile) {
-        return profileRepository.save(profile);
+    public Profile saveProfile(Profile usernameRequest) {
+        return profileRepository.save(usernameRequest);
     }
 }
